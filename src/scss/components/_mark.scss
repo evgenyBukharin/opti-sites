@@ -24,6 +24,7 @@ body {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			transition: background 0.3s ease;
 			&-black {
 				background: var(--black-color);
 			}
@@ -85,8 +86,8 @@ body {
 		border-radius: 16px 0 16px 16px;
 		&:hover {
 			& .mark {
-				&__kit {
-					filter: grayscale(100%);
+				&__container-kit {
+					background: rgba(28, 32, 42, 0.2);
 				}
 			}
 		}
@@ -111,6 +112,24 @@ body {
 		gap: 16px;
 		text-decoration: none;
 		color: var(--black-color);
+		&:hover {
+			& .mark {
+				&__container-kit {
+					&-black {
+						background: var(--black-color);
+					}
+					&-green {
+						background: var(--green-color);
+					}
+					&-purple {
+						background: var(--purple-color);
+					}
+					&-blue {
+						background: var(--blue-color);
+					}
+				}
+			}
+		}
 	}
 }
 
